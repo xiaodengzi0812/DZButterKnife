@@ -129,7 +129,9 @@ public class MyButterKnifeProcessor extends AbstractProcessor {
 
             // MainActivity下对应的注解属性集合
             Map<Class, List<Element>> elementMap = entry.getValue();
+            // 获取绑定view的集合
             List<Element> elementList = elementMap.get(BindView.class);
+            // 获取点击事件的集合
             List<Element> bindClickElementList = elementMap.get(BindClick.class);
             // 添加 target.tv1 = Utils.findViewById(target,R.id.tv1);
             if (elementList != null) {
